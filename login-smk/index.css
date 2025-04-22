@@ -1,0 +1,110 @@
+/* Mengatur font dan background secara umum */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradasi warna yang menarik */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Membuat form login lebih modern */
+form {
+    background: rgba(0, 0, 0, 0.6); /* Transparan hitam dengan efek gelap */
+    padding: 40px 30px;
+    border-radius: 20px; /* Membulatkan sudut form */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    z-index: 1;
+    transform: translateY(0);
+    animation: slideIn 1s ease-out; /* Animasi masuk form */
+}
+
+/* Efek animasi untuk form */
+@keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Styling untuk judul form login */
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transform: translateY(0);
+    animation: slideIn 1s ease-out;
+    
+}
+
+/* Styling input text dan password */
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat input fokus */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #ff7e5f; /* Warna border berubah saat fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.8);
+}
+
+/* Styling tombol submit (Login) */
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff7e5f; /* Warna tombol */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efek hover pada tombol submit */
+input[type="submit"]:hover {
+    background-color: #feb47b; /* Warna berubah saat hover */
+    transform: scale(1.05);
+}
+
+/* Styling untuk link kecil di bawah form (misalnya: lupa password, dll.) */
+form a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #ff7e5f;
+}
+
+/* Responsif - Mengatur form agar lebih ramping di layar kecil */
+@media (max-width: 600px) {
+    form {
+        width: 80%;
+    }
+}
